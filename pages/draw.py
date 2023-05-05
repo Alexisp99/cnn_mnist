@@ -24,11 +24,14 @@ def data():
 
 def user_figure() :
     
-    fig = px.imshow(draw)
+    fig = px.imshow(draw, color_continuous_scale= "gray")
     fig.update_layout(coloraxis_showscale=False)
     fig.update_xaxes(showticklabels=False)
     fig.update_yaxes(showticklabels=False)
     return fig
+
+def concat(pred):
+        st.session_state["predict"] = st.session_state["predict"].append(pred)
 
 @st.cache_resource
 def load_models():
@@ -47,7 +50,7 @@ with left_bar :
     stroke_width = st.slider("Stroke width: ", 15, 20, 15)
     
     canvas_result = st_canvas(
-        fill_color="",  # Fixed fill color with some opacity
+        fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
         stroke_width=stroke_width,
         #background_image=Image.open(bg_image) if bg_image else None,
         update_streamlit= False,
@@ -77,4 +80,53 @@ pred_class_n = np.argmax(pred_ad_n,axis=1)
 st.write(user_figure())
 st.write(np.round(pred_ad_n,3))
 st.write(pred_class_n)
+
+df_pred = pd.DataFrame(columns=['Prediction'])
+
+def add_data():
+    # Create an empty DataFrame if it doesn't already exist in session state
+    if 'dataframe' not in st.session_state:
+        st.session_state.dataframe = df_pred
+
+    # Create a counter if it doesn't already exist in session state
+    if 'counter' not in st.session_state:
+        st.session_state.counter = 0
+
+    if 'counter_true_false' not in st.session_state:
+        st.session_state.counter_true_false = 0
+    
+        
+ 
+
+    # Create a button that appends data to the DataFrame when clicked
+    btn_true = st.button("True")
+    btn_false = st.button("False")
+    btn_reset = st.button("reset")
+   
+    
+    
+    if btn_true :
+        if st.session_state.counter != 3:
+            st.session_state.counter_true_false += 1
+                
+    if st.button("Prediction"):
+        if st.session_state.counter != 3:
+            st.session_state.counter += 1
+            st.session_state.dataframe = st.session_state.dataframe.append({'Prediction': f'Number {pred_class_n}'}, 
+                                                                           ignore_index=True)
+            
+        else:
+            st.warning("You've reached the maximum number of times to add data!")
+            ratio =  st.session_state.counter_true_false /3
+            st.write(ratio)
+    if btn_reset :
+        st.session_state.dataframe  = df_pred 
+        st.session_state.counter = 0
+        st.session_state.counter_true_false = 0
+                
+                
+
+    st.write(st.session_state.counter_true_false)        
+    st.write(st.session_state.dataframe)
+add_data()
 

@@ -67,28 +67,32 @@ st.write(px.imshow(img_tensor.reshape(28,28), color_continuous_scale= 'gray'))
 # Get the activations for all layers
 activations = activation_model.predict(img_tensor)
 
+
+
 # Visualize feature maps for each layer
 for layer, activation in zip(model.layers, activations):
     if isinstance(layer, Conv2D):
         filters = layer.filters
         fig = make_subplots(rows=int(filters/4), cols=4)
         for i in range(filters):
-            fig.add_trace(px.imshow(activation[0, :, :, i], color_continuous_scale='gray').data[0], row=int(i/4)+1, col=(i%4)+1)
+            fig.add_trace(px.imshow(activation[0, :, :, i]).data[0], row=int(i/4)+1, col=(i%4)+1)
         fig.update_xaxes(showticklabels=False)
         fig.update_yaxes(showticklabels=False)
+        fig.update_coloraxes(colorscale = "gray")
         fig.update_layout(title=f"Conv2D Layer {layer.name}",coloraxis_showscale=False)
-        fig.update_layout(width = 1000, height = 1000)
+        fig.update_layout(width = 1500, height = 1500)
         st.write(fig)
     elif isinstance(layer, MaxPooling2D):
         fig = make_subplots(rows=1, cols=4)
         for i in range(layer.pool_size[1]):
-            fig.add_trace(px.imshow(activation[0, :, :, i], color_continuous_scale='gray').data[0], row=1, col=i+1)
+            fig.add_trace(px.imshow(activation[0, :, :, i]).data[0], row=1, col=i+1)
         fig.update_xaxes(showticklabels=False)
         fig.update_yaxes(showticklabels=False)
+        fig.update_coloraxes(colorscale = "gray")
         fig.update_layout(title=f"MaxPooling2D Layer {layer.name}",coloraxis_showscale=False)
         st.write(fig)
     elif isinstance(layer, Dense):
-        fig = px.imshow(activation, color_continuous_scale='gray')
+        fig = px.imshow(activation, color_continuous_scale='gray', width= 1500, height= 500)
         fig.update_xaxes(showticklabels=False)
         fig.update_yaxes(showticklabels=False)
         fig.update_layout(title=f"Dense Layer {layer.name}",coloraxis_showscale=False)
