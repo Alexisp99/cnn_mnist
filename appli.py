@@ -11,7 +11,6 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 
-
 #create the page of the web app
 st.set_page_config(page_title = "Immobilier",
                    layout = "wide", 
@@ -34,22 +33,34 @@ def user_figure(draw) :
     fig.update_yaxes(showticklabels=False)
     return fig
 
+# setting up the session state
+if "random_num" not in st.session_state:
+    st.session_state.random_num = None
+    
 def image_pred() : 
-    
+    # Initialize or get the test data
     test = np.asarray(import_data("test"))
-    i = np.random.randint(0,test.shape[0])
-    image = user_figure(test[i].reshape(28,28))
     
+    # Initialize session state for dataset index
+    if "data_index" not in st.session_state:
+        st.session_state.data_index = np.random.randint(0, test.shape[0])
+
+    image = user_figure(test[st.session_state.data_index].reshape(28, 28))
     st.write(image)
+
     prediction = st.button("Predict")
-    
-    if prediction == True:
-                
+    choose_number = st.button("reset")
+
+    if choose_number:
+        # Update session state with a new random index
+        st.session_state.data_index = np.random.randint(0, test.shape[0])
+
+    if prediction:
         model = load_models()
-        pred = model.predict(test[i].reshape(1,28,28))
-        pred_class = np.argmax(pred,axis=1)
-        st.write(np.round(pred,3))
-        st.write(pred_class)
+        pred = model.predict(test[st.session_state.data_index].reshape(1, 28, 28, 1))
+        pred_class = np.argmax(pred, axis=1)
+        st.write(np.round(pred, 3))
+        st.write(f"Predicted class: {pred_class[0]}")
 
 
 

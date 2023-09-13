@@ -1,0 +1,15 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/236c9cb76b8143e79ab541fef4633019/artifacts
+end_time: 1693314508512
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: active
+run_id: 236c9cb76b8143e79ab541fef4633019
+run_name: Add drop out
+run_uuid: 236c9cb76b8143e79ab541fef4633019
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693314476269
+status: 3
+tags: []
+user_id: alexis

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/0/d8894463cc2c4055ae0a1787f5bf27a0/artifacts
+end_time: 1693311177306
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d8894463cc2c4055ae0a1787f5bf27a0
+run_name: nimble-zebra-178
+run_uuid: d8894463cc2c4055ae0a1787f5bf27a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693311157138
+status: 3
+tags: []
+user_id: alexis

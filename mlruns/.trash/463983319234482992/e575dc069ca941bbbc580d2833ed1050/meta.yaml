@@ -1,0 +1,16 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/463983319234482992/e575dc069ca941bbbc580d2833ed1050/artifacts
+deleted_time: 1693313310516
+end_time: 1693311605973
+entry_point_name: ''
+experiment_id: '463983319234482992'
+lifecycle_stage: deleted
+run_id: e575dc069ca941bbbc580d2833ed1050
+run_name: calm-sponge-839
+run_uuid: e575dc069ca941bbbc580d2833ed1050
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693311582396
+status: 3
+tags: []
+user_id: alexis

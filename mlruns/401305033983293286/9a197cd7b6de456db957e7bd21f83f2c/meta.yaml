@@ -1,0 +1,15 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/9a197cd7b6de456db957e7bd21f83f2c/artifacts
+end_time: 1693577979347
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: active
+run_id: 9a197cd7b6de456db957e7bd21f83f2c
+run_name: Baseline
+run_uuid: 9a197cd7b6de456db957e7bd21f83f2c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693577979263
+status: 3
+tags: []
+user_id: alexis

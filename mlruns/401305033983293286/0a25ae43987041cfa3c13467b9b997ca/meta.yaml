@@ -1,0 +1,16 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/0a25ae43987041cfa3c13467b9b997ca/artifacts
+deleted_time: 1693314260509
+end_time: 1693313619481
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: deleted
+run_id: 0a25ae43987041cfa3c13467b9b997ca
+run_name: Add Max Pooling
+run_uuid: 0a25ae43987041cfa3c13467b9b997ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693313600278
+status: 3
+tags: []
+user_id: alexis

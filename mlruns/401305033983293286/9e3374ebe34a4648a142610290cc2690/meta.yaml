@@ -1,0 +1,16 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/9e3374ebe34a4648a142610290cc2690/artifacts
+deleted_time: 1693315178236
+end_time: 1693314994882
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: deleted
+run_id: 9e3374ebe34a4648a142610290cc2690
+run_name: Add Batch normalization
+run_uuid: 9e3374ebe34a4648a142610290cc2690
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693314838074
+status: 3
+tags: []
+user_id: alexis

@@ -1,0 +1,6 @@
+artifact_location: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286
+creation_time: 1693313519535
+experiment_id: '401305033983293286'
+last_update_time: 1693313519535
+lifecycle_stage: active
+name: MNIST CNN

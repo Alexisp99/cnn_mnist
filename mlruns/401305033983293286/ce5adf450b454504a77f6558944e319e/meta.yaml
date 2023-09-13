@@ -1,0 +1,15 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/ce5adf450b454504a77f6558944e319e/artifacts
+end_time: 1693764200699
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: active
+run_id: ce5adf450b454504a77f6558944e319e
+run_name: Conv2D
+run_uuid: ce5adf450b454504a77f6558944e319e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693764200615
+status: 3
+tags: []
+user_id: alexis

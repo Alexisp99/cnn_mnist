@@ -76,11 +76,12 @@ for layer, activation in zip(model.layers, activations):
         fig = make_subplots(rows=int(filters/4), cols=4)
         for i in range(filters):
             fig.add_trace(px.imshow(activation[0, :, :, i]).data[0], row=int(i/4)+1, col=(i%4)+1)
+            
         fig.update_xaxes(showticklabels=False)
         fig.update_yaxes(showticklabels=False)
         fig.update_coloraxes(colorscale = "gray")
         fig.update_layout(title=f"Conv2D Layer {layer.name}",coloraxis_showscale=False)
-        fig.update_layout(width = 1500, height = 1500)
+        fig.update_layout(width = 750, height = 1500)
         st.write(fig)
     elif isinstance(layer, MaxPooling2D):
         fig = make_subplots(rows=1, cols=4)

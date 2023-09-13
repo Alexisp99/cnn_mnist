@@ -1,0 +1,15 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/401305033983293286/f79bfd6c36b940a087e28748da743424/artifacts
+end_time: 1693314794506
+entry_point_name: ''
+experiment_id: '401305033983293286'
+lifecycle_stage: active
+run_id: f79bfd6c36b940a087e28748da743424
+run_name: Add Conv 2D, 64, (3,3)
+run_uuid: f79bfd6c36b940a087e28748da743424
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693314669568
+status: 3
+tags: []
+user_id: alexis

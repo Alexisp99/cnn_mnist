@@ -1,0 +1,16 @@
+artifact_uri: file:///home/alexis/code/Alexisp99/Simplon/projet/mnist/mlruns/463983319234482992/0455855b396c41ab9ef3591c51cd0155/artifacts
+deleted_time: 1693313310516
+end_time: 1693311514021
+entry_point_name: ''
+experiment_id: '463983319234482992'
+lifecycle_stage: deleted
+run_id: 0455855b396c41ab9ef3591c51cd0155
+run_name: valuable-wren-386
+run_uuid: 0455855b396c41ab9ef3591c51cd0155
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693311494769
+status: 3
+tags: []
+user_id: alexis
